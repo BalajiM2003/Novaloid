@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Sora', 'Poppins', sans-serif;
+  background: #0f0f0f;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+@keyframes neon-border {
+  0% { box-shadow: 0 0 8px #39FF14, 0 0 16px #00BFFF; }
+  50% { box-shadow: 0 0 24px #39FF14, 0 0 32px #00BFFF; }
+  100% { box-shadow: 0 0 8px #39FF14, 0 0 16px #00BFFF; }
+}
+
+@keyframes cursorPulse {
+  0% { box-shadow: 0 0 16px 4px #39FF14, 0 0 32px 8px #00BFFF; }
+  100% { box-shadow: 0 0 32px 8px #39FF14, 0 0 64px 16px #00BFFF; }
+}
+
+.elite-neon-border {
+  animation: neon-border 2s infinite alternate;
+  border: 2px solid #39FF14;
+  border-radius: 9999px;
+}
